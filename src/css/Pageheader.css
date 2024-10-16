@@ -1,0 +1,37 @@
+.page-header {
+  position: relative;
+  padding: 40px 0;
+  background-image: url(https://gnodesign.com/templates/movify/assets/images/posters/movie-collection.jpg);
+}
+
+.overlay-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(141, 25, 50, 0.9) 0%,
+    rgba(92, 47, 115, 0.9) 100%
+  );
+  z-index: 1;
+}
+
+.inner-container {
+  justify-content: center;
+  color: white;
+  position: relative;
+  width: 100%;
+  margin: 0px auto;
+  z-index: 2;
+  max-width: 1200px;
+}
+
+.inner-container h2 {
+  font-size: 38px;
+  margin-bottom: 5px;
+  text-align: left;
+  font-weight: 400;
+  margin: 20px;
+}

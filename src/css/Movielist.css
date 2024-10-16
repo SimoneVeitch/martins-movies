@@ -1,0 +1,140 @@
+.movie-list-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.movie-card {
+  width: 350px;
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+}
+
+.movie-card:hover {
+  transform: translateY(-10px);
+}
+
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.movie-info h2 {
+  color: #3e4555;
+  font-size: 30.4px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.movie-info p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #948a99;
+  margin-top: 0;
+}
+
+.movie-poster {
+  overflow: hidden;
+  height: 350px;
+}
+
+.movie-poster img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.details-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #948a99;
+  margin-top: 0;
+}
+
+.genres {
+  display: flex;
+  gap: 5px;
+}
+
+.genre {
+  font-size: 12px;
+}
+
+.stars,
+.rating {
+  display: flex;
+  align-items: center;
+}
+
+.star-icon {
+  color: gold;
+  margin-right: 5px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.read-more-btn {
+  background: #9352b3;
+  font-size: 14px;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: filter 0.3s;
+}
+
+.read-more-btn:hover {
+  filter: brightness(113%);
+}
+
+.watched-btn {
+  background: #f0f0f0;
+  color: #3e4555;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s, color 0.3s;
+}
+
+.watched-btn:hover {
+  background: #e0e0e0;
+}
+
+.watched-btn.active {
+  background: #3e4555;
+  color: #fff;
+}

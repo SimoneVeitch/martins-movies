@@ -1,0 +1,68 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+.pagination button {
+  margin: 0 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap onto the next line */
+  justify-content: center; /* Center cards horizontally */
+  gap: 20px; /* Space between cards */
+}
+
+/* Card styles */
+.movie-card {
+  width: 350px; /* Fixed width */
+  height: 600px; /* Fixed height */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  border-radius: 8px; /* Round corners */
+  overflow: hidden; /* Ensure content doesn't overflow */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for visibility */
+  flex: 0 0 auto; /* Prevent flexbox from shrinking */
+}
+
+/* Image styles */
+.movie-poster {
+  width: 100%; /* Full width */
+  height: 50%; /* Half height of the card */
+  object-fit: cover; /* Cover to maintain aspect ratio */
+}
+
+/* Info styles */
+.movie-info {
+  display: flex;
+  flex-direction: column; /* Stack info vertically */
+  padding: 10px; /* Space around the info */
+  flex: 1; /* Allow the info section to fill remaining space */
+  justify-content: space-between; /* Space out title, rating, and description */
+}
+
+/* Rating styles */
+.imdb-rating {
+  display: flex;
+  align-items: center; /* Center the star and rating */
+  margin-bottom: 5px; /* Space below the rating */
+}

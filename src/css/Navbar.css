@@ -119,7 +119,7 @@
     display: none;
   }
   .extra-nav {
-    display: none;
+    display: none; /* Hide on mobile */
   }
 
   .nav-items.open {
@@ -169,5 +169,15 @@
     margin-top: 5px;
     justify-content: center;
     font-weight: 500;
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger.open {
+    margin-right: 200px;
+  }
+
+  .nav-items.open {
+    width: 150px;
   }
 }

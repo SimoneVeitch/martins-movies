@@ -32,3 +32,28 @@
 .footer-nav-items a:hover {
   color: #9352b3;
 }
+
+@media (max-width: 768px) {
+  .footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .footer-nav-items {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-nav-items a {
+    padding: 3px;
+    font-size: 14px;
+  }
+
+  .footer-extra-nav p {
+    padding: 10px;
+    font-size: 14px;
+  }
+}

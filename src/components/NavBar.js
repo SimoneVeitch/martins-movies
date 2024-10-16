@@ -38,16 +38,11 @@ const NavBar = () => {
         <a href="#" className="notification">
           <FontAwesomeIcon icon={faEarthOceania} color="#212529" />
         </a>
-        <a
-          href="#login-register-popup"
-          className="btn login-btn popup-with-zoom-anim"
-        >
+        <a href="#login-register-popup" className="btn login-btn">
           <FontAwesomeIcon icon={faUser} className="icon-user" />
           Login
         </a>
       </div>
-
-      {isOpen && <div className="menu-overlay open" onClick={toggleMenu} />}
     </header>
   );
 };

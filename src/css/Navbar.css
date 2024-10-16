@@ -119,7 +119,7 @@
     display: none;
   }
   .extra-nav {
-    display: none; /* Hide on mobile */
+    display: none;
   }
 
   .nav-items.open {

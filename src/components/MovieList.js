@@ -1,6 +1,5 @@
 import React from "react";
 import MovieCard from "./MovieCard";
-import "../styles.css";
 
 const MovieList = ({ movies, toggleWatched, watchedMovies, genres }) => {
   if (!movies || movies.length === 0) {

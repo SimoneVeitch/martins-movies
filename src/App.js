@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useLocalStorage } from "usehooks-ts"; // Import useLocalStorage
+import { useLocalStorage } from "usehooks-ts";
 import MovieList from "./components/MovieList";
 import SearchBar from "./components/SearchBar";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 import Pagination from "./components/Pagination";
-import "./styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
@@ -14,7 +13,7 @@ const App = () => {
   const [movies, setMovies] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
-  const [searchKeyword, setSearchKeyword] = useState(""); // State for search keyword
+  const [searchKeyword, setSearchKeyword] = useState("");
   const [watchedMovies, setWatchedMovies] = useLocalStorage(
     "watchedMovies",
     []
@@ -54,7 +53,7 @@ const App = () => {
       });
 
       const moviesWithExternalIds = await Promise.all(externalIdsPromises);
-      setMovies(moviesWithExternalIds); // Set the fetched movies
+      setMovies(moviesWithExternalIds);
     } catch (error) {
       console.error("Error fetching movies:", error);
     }
@@ -83,8 +82,8 @@ const App = () => {
 
   const handlePageChange = (page) => {
     if (page > 0 && page <= totalPages) {
-      setCurrentPage(page); // Update current page
-      loadMovies(page, searchKeyword); // Fetch new movies for the selected page
+      setCurrentPage(page);
+      loadMovies(page, searchKeyword);
       window.scrollTo(0, 0);
       window.history.pushState(null, "", `?page=${page}`);
     }
@@ -100,9 +99,9 @@ const App = () => {
         document.body.scrollTop > 100 ||
         document.documentElement.scrollTop > 100
       ) {
-        scrollToTopButton.style.display = "flex"; // Show button
+        scrollToTopButton.style.display = "flex";
       } else {
-        scrollToTopButton.style.display = "none"; // Hide button
+        scrollToTopButton.style.display = "none";
       }
     };
 
